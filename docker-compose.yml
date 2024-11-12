@@ -1,0 +1,12 @@
+
+version: '3.8'
+
+services:
+  monitorTranscoding:
+    image: openjdk:17
+    container_name: monitorTranscoding-container
+    ports:
+      - "1698:1698"
+    working_dir: /app
+    command: [java, -jar, monitorTranscoding-1.0.0-SNAPSHOT.jar]
+

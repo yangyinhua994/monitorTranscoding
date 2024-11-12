@@ -19,13 +19,9 @@ public class WebsocketConfig implements WebSocketConfigurer {
         this.baseSocketHandler = baseSocketHandler;
     }
 
-
-
-
-
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(baseSocketHandler, "/ws").setAllowedOrigins("*");
+        registry.addHandler(baseSocketHandler, "/videoConvert/ws").setAllowedOrigins("*");
     }
 
 }
